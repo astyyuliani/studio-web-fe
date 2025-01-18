@@ -1,0 +1,25 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - "build"
+      - "-t"
+      - "us-central1-docker.pkg.dev/$PROJECT_ID/infokus-cloud/frontend:$COMMIT_SHA"
+      - "."
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - "push"
+      - "us-central1-docker.pkg.dev/$PROJECT_ID/infokus-cloud/frontend:$COMMIT_SHA"
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - "run"
+      - "deploy"
+      - "infokus-frontend"
+      - "--image=us-central1-docker.pkg.dev/$PROJECT_ID/infokus-cloud/frontend:$COMMIT_SHA"
+      - "--region=us-central1"
+      - "--cpu=2"
+      - "--memory=2048Mi"
+      - "--allow-unauthenticated"
+      - "--set-secrets=VITE_API_URL=api_url:latest"
+images:
+  - "us-central1-docker.pkg.dev/$PROJECT_ID/infokus-cloud/frontend:$COMMIT_SHA"
+logsBucket: "gs://infokus/logs"
