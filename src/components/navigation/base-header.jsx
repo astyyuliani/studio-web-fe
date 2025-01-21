@@ -43,10 +43,10 @@ export default function Header({
   const { user, isLoading } = useSession();
   return (
     <header className="sticky top-0 z-40 w-full bg-white">
-      <div className="mx-auto h-16 w-full max-w-[1440px] px-4 font-medium lg:h-20 lg:px-20">
+      <div className="mx-auto h-12 w-full max-w-[1440px] px-4 font-medium lg:h-16 lg:px-20">
         <nav className="inline-flex h-full w-full items-center justify-between">
           <Link to={'/'}>
-            <img src="/logo.png" alt="Logo" className="h-9 lg:h-12" />
+            <img src="/logo.png" alt="Logo" className="h-7 lg:h-10" />
           </Link>
           {/* <p className="text-3xl h-3 lg:h-10">Infokus</p> */}
           <ul className="hidden gap-11 lg:inline-flex">
