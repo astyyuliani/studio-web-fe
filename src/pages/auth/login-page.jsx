@@ -18,7 +18,7 @@ export default function LoginPage() {
       {/* <Header auth_section={false} /> */}
       <div className="flex items-center justify-center w-full mb-5">
         <Link to={'/'}>
-          <img src="/logo.png" alt="Logo" className="h-12 lg:h-20" />
+          <img src="/logo.png" alt="Logo" className="h-10 lg:h-20" />
         </Link>
       </div>
       <LoginForm />
