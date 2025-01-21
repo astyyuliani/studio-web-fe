@@ -66,8 +66,8 @@ export default function LoginForm() {
   };
 
   return (
-    <Card className="mx-auto w-full max-w-lg space-y-6 py-6 lg:px-12 lg:py-16">
-      <CardHeader className="space-y-6 text-center">
+    <Card className="mx-auto w-full max-w-lg space-y-6 py-4 lg:px-6 lg:py-16">
+      <CardHeader className="space-y-4 text-center">
         <CardTitle className="font-medium lg:text-4xl">Masuk</CardTitle>
         <CardDescription>
           Masuk untuk melakukan pemesanan di Infokus Studio

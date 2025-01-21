@@ -14,11 +14,11 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="flex min-h-dvh w-full flex-col items-center justify-center gap-4 p-4 lg:p-0">
+    <main className="flex min-h-screen w-full flex-col items-center justify-center gap-2 p-2 lg:p-0">
       {/* <Header auth_section={false} /> */}
-      <div className="flex items-center justify-center w-full mb-5">
+      <div className="flex items-center justify-center w-full mb-0">
         <Link to={'/'}>
-          <img src="/logo.png" alt="Logo" className="h-10 lg:h-20" />
+          <img src="/logo.png" alt="Logo" className="h-14 lg:h-16" />
         </Link>
       </div>
       <LoginForm />
