@@ -217,7 +217,7 @@ export default function PaymentPage() {
                 transaction.data.transaction_detail.some(v => v['isValid'] === false || v['isValid'] === null) ? (
                   <Alert
                     variant="primary"
-                    className="border-2 border-primary bg-primary-foreground mt-6"
+                    className="border-2 border-primary mt-6"
                   >
                     <AlertDescription className="font-medium text-primary text-center">
                       Batas pembayaran :{" "}
@@ -243,7 +243,7 @@ export default function PaymentPage() {
                       ? "Valid"
                       : detail.isValid === "false"
                         ? "Tidak Valid"
-                        : "Sedang diproses";
+                        : "Proses";
 
                   const valid = detail.isValid === "true";
                   const inValid = detail.isValid === "false";
@@ -255,10 +255,10 @@ export default function PaymentPage() {
                       <TableCell>
                         <Badge
                           className={cn(
-                            "bg-sky-600",
-                            valid && "bg-green-500",
-                            inValid && "bg-destructive",
-                            "px-2 py-1 text-md"
+                            "bg-sky-600 flex items-center justify-center px-2 py-1.5 font-normal",
+                            valid && "bg-green-500 px-2 py-1.5",
+                            inValid && "bg-destructive px-2 py-1.5",
+                            "rounded-full text-white text-sm w-24 h-8"
                           )}
                         >
                           {status}

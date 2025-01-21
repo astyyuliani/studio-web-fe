@@ -74,10 +74,10 @@ export default function HistoryTable() {
             reservation.status === "success"
               ? "Selesai"
               : reservation.status === "cancelled"
-                ? "Dibatalkan"
-                : "Sedang diproses";
+                ? "Batal"
+                : "Proses";
 
-          const isCancelled = rsrvStatus === "Dibatalkan";
+          const isCancelled = rsrvStatus === "Batal";
           const isSuccess = rsrvStatus === "Selesai";
           return (
             <TableRow key={reservation.id}>
@@ -88,14 +88,25 @@ export default function HistoryTable() {
               <TableCell className="text-center capitalize flex justify-center items-center">
                 <div
                   className={cn(
-                    "bg-yellow-500 px-2 py-1 ",
-                    isSuccess && "bg-green-500 px-2 py-1 ",
-                    isCancelled && "bg-red-500 px-2 py-1 ",
-                    "rounded-full text-white text-sm w-fit"
+                    "bg-yellow-500 px-2 py-1.5 ",
+                    isSuccess && "bg-green-500 px-2 py-1.5 ",
+                    isCancelled && "bg-red-500 px-2 py-1.5 ",
+                    "rounded-full text-white text-sm w-24 text-center"
                   )}
                 >
                   {rsrvStatus}
                 </div>
+
+                {/* <div
+                  className={cn(
+                    "px-2 py-1.5 ",
+                    isSuccess && "px-2 py-1.5 ",
+                    isCancelled && "px-2 py-1.5 ",
+                    "text-black text-sm w-24 text-center"
+                  )}
+                >
+                  {rsrvStatus}
+                </div> */}
               </TableCell>
               <TableCell className="text-center">
                 {timeFormat(reservation.timeSlot.time)}

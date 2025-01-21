@@ -286,14 +286,14 @@ export default function TransactionsTable() {
           {transactions.data.filter(item => aksi.tableFilter.toFiltered(item, ['reservation.user.name', 'total', 'reservation.category.name', 'reservation.categoryPackage.name'])).slice(...aksi.tableFilter.toSliced()).map((trx, index) => {
             const trxStatus =
               trx.status === "paid"
-                ? "Lunas"
+                ? "Selesai"
                 : trx.status === "expired"
-                  ? "Kadaluarsa"
-                  : "Belum Lunas";
+                  ? "Batal"
+                  : "Proses";
             const trxType =
               trx.type === "fullpayment" ? "Lunas" : "DP 50%";
-            const isPaid = trxStatus === "Lunas";
-            const isExpired = trxStatus === "Kadaluarsa";
+            const isPaid = trxStatus === "Selesai";
+            const isExpired = trxStatus === "Batal";
 
             const fullPayment = trx.type === "fullpayment";
             const dpPayment = trx.type === "downpayment";
@@ -309,9 +309,9 @@ export default function TransactionsTable() {
                   <div className="flex items-center">
                     <div
                       className={cn(
-                        fullPayment && "bg-sky-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                        dpPayment && "bg-teal-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                        "text-center lg:text-left px-2 py-1 rounded-full text-white text-sm w-fit",
+                        fullPayment && "text-center",
+                        dpPayment && "text-white text-sm w-20 text-center",
+                        "text-right px-14 py-1 rounded-full text-black text-sm w-20",
                       )}
                     >
                       {trxType}
@@ -322,10 +322,10 @@ export default function TransactionsTable() {
                   <div className="flex items-center">
                     <div
                       className={cn(
-                        "bg-yellow-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                        isPaid && "bg-green-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                        isExpired && "bg-red-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                        "text-center lg:text-left",
+                        "bg-yellow-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
+                        isPaid && "bg-green-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
+                        isExpired && "bg-red-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
+                        "text-center",
                       )}
                     >
                       {trxStatus}

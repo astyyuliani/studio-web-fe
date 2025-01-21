@@ -261,10 +261,10 @@ export default function ReservationsTable() {
                 reservation.status === "success"
                   ? "Selesai"
                   : reservation.status === "cancelled"
-                    ? "Dibatalkan"
+                    ? "Batal"
                     : "Proses";
 
-              const isCancelled = rsrvStatus === "Dibatalkan";
+              const isCancelled = rsrvStatus === "Batal";
               const isSuccess = rsrvStatus === "Selesai";
 
               return (
@@ -290,9 +290,9 @@ export default function ReservationsTable() {
                     <div className="flex justify-center items-center">
                       <div
                         className={cn(
-                          "bg-yellow-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                          isSuccess && "bg-green-500 px-2 py-1 rounded-full text-white text-sm w-fit",
-                          isCancelled && "bg-red-500 px-2 py-1 rounded-full text-white text-sm w-fit",
+                          "bg-yellow-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
+                          isSuccess && "bg-green-500 rounded-full text-white text-sm w-20 text-center",
+                          isCancelled && "bg-red-500 rounded-full text-white text-sm w-20 text-center",
                         )}
                       >
                         {rsrvStatus}

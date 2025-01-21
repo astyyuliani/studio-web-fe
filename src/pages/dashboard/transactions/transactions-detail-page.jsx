@@ -170,9 +170,9 @@ export default function TransactionsDetailPage() {
           <p>Metode Pelunasan</p>
           <Badge
             className={cn(
-              fullPayment && "bg-sky-500",
+              fullPayment && "bg-sky-500 px-2 py-1 text-white text-sm w-20 text-center",
               dpPayment && "bg-teal-500",
-              "max-w-max px-2 py-1 rounded-full text-white text-sm w-fit",
+              "text-white text-sm w-20 text-center",
             )}
           >
             {trxType}
