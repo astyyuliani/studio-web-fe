@@ -86,9 +86,9 @@ export function SidebarLogout() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex flex-row items-center justify-center gap-2 lg:justify-center">
-          <AlertDialogCancel className="m-0">Batal</AlertDialogCancel>
+          <AlertDialogCancel className="m-0 border border-primary text-primary  w-20 text-center hover:text-primary hover:bg-accent">Batal</AlertDialogCancel>
           <AlertDialogAction
-            className="m-0 bg-primary hover:bg-primary/70 ease-out duration-100"
+            className="m-0  w-20 bg-primary/80 hover:bg-primary/100"
             onClick={logout}
           >
             Keluar

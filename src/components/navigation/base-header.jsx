@@ -229,8 +229,8 @@ function ProfileMenu() {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter className="flex flex-row items-center justify-center sm:justify-center">
-          <AlertDialogCancel className="border border-primary text-primary w-20 text-center hover:text-primary active:bg-gray-200">Batal</AlertDialogCancel>
-          <AlertDialogAction onClick={logout} className={`bg-primary/80 hover:bg-primary/100 w-20 text-center`}>
+          <AlertDialogCancel className="border border-primary text-primary  w-20 text-center hover:text-primary hover:bg-accent">Batal</AlertDialogCancel>
+          <AlertDialogAction onClick={logout} className={`w-20 bg-primary/80 hover:bg-primary/100`}>
             Keluar
           </AlertDialogAction>
         </AlertDialogFooter>
