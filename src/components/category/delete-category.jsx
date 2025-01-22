@@ -73,7 +73,7 @@ export default function DeleteCategory({ categoryId }) {
         </DialogHeader>
         <DialogFooter className="flex flex-row items-center justify-center gap-2 lg:justify-end">
           <Button
-            variant="outline"
+            variant="line"
             disabled={isSubmit}
             onClick={() => setIsOpen(false)}
             className="m-0"

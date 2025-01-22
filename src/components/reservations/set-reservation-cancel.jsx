@@ -63,9 +63,9 @@ export default function SetReservationCancel({ id }) {
         </DialogHeader>
         <DialogFooter className="flex flex-row items-center justify-center gap-2 lg:justify-end">
           <DialogClose asChild>
-            <Button variant="outline">Tidak</Button>
+            <Button variant="line">Tidak</Button>
           </DialogClose>
-          <Button onClick={handleSetSuccess} isLoading={isProcessing}>
+          <Button  variant="auto" onClick={handleSetSuccess} isLoading={isProcessing}>
             Ya
           </Button>
         </DialogFooter>

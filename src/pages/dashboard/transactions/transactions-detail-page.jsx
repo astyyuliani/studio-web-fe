@@ -289,7 +289,7 @@ export default function TransactionsDetailPage() {
                   <TableCell>
                     <Dialog className="max-w-2xl">
                       <DialogTrigger asChild>
-                        <Button size="sm">Lihat Bukti</Button>
+                        <Button variant="long">Lihat Bukti</Button>
                       </DialogTrigger>
                       <DialogContent>
                         <DialogHeader>
@@ -332,9 +332,9 @@ export default function TransactionsDetailPage() {
                               </DialogHeader>
                               <DialogFooter className="flex flex-row items-center justify-center gap-2 lg:justify-end">
                                 <DialogClose asChild>
-                                  <Button variant="outline">Batal</Button>
+                                  <Button variant="line">Batal</Button>
                                 </DialogClose>
-                                <Button
+                                <Button variant="auto"
                                   onClick={() => handleValid(detail.id)}
                                   isLoading={isProcessing}
                                 >
@@ -368,9 +368,9 @@ export default function TransactionsDetailPage() {
                               </DialogHeader>
                               <DialogFooter className="flex flex-row items-center justify-center gap-2 lg:justify-end">
                                 <DialogClose asChild>
-                                  <Button variant="outline">Batal</Button>
+                                  <Button variant="line">Batal</Button>
                                 </DialogClose>
-                                <Button
+                                <Button variant="auto"
                                   onClick={() => handleInvalid(detail.id)}
                                   isLoading={isProcessing}
                                 >
