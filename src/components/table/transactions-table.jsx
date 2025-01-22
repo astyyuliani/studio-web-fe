@@ -270,13 +270,13 @@ export default function TransactionsTable() {
             <TableHead className="w-16 text-center">No</TableHead>
             <TableHead className="w-32 text-center">ID Reservasi</TableHead>
             <TableHead>User</TableHead>
-            <TableHead className="text-center lg:w-64 lg:text-left">
+            <TableHead className="text-center lg:w-64">
               Metode Pembayaran
             </TableHead>
-            <TableHead className="text-center lg:w-48 lg:text-left">
+            <TableHead className="text-center lg:w-48">
               Status
             </TableHead>
-            <TableHead>Total</TableHead>
+            <TableHead className="text-center">Total</TableHead>
             <TableHead className="hidden lg:table-cell">Kategori</TableHead>
             <TableHead className="hidden lg:table-cell">Paket</TableHead>
             <TableHead className="text-center">Aksi</TableHead>
@@ -305,27 +305,27 @@ export default function TransactionsTable() {
                   {trx.reservation.id}
                 </TableCell>
                 <TableCell>{trx.reservation.user.name}</TableCell>
-                <TableCell className="text-center lg:text-left">
-                  <div className="flex items-center">
+                <TableCell className="text-center">
+                  <div className="flex justify-center items-center">
                     <div
                       className={cn(
                         fullPayment && "text-center",
-                        dpPayment && "text-white text-sm w-20 text-center",
-                        "text-right px-14 py-1 rounded-full text-black text-sm w-20",
+                        dpPayment && "text-white text-sm text-center",
+                        "rounded-full text-black text-sm",
                       )}
                     >
                       {trxType}
                     </div>
                   </div>
                 </TableCell>
-                <TableCell className="text-center lg:text-left">
-                  <div className="flex items-center">
+                <TableCell className="text-center ">
+                  <div className="flex justify-center items-center">
                     <div
                       className={cn(
-                        "bg-yellow-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
-                        isPaid && "bg-green-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
-                        isExpired && "bg-red-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
-                        "text-center",
+                        "bg-yellow-500 flex items-center justify-center px-2 py-2 font-normal",
+                        isPaid && "bg-green-500 px-2 py-2",
+                        isExpired && "bg-red-500 px-2 py-2",
+                         "rounded-full text-white text-sm w-24 text-center"
                       )}
                     >
                       {trxStatus}

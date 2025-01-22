@@ -108,7 +108,7 @@ export default function PaymentPage() {
             {transaction.data.expiredAt && (
               <Alert
                 variant="primary"
-                className="border-2 border-primary bg-primary-foreground"
+                className="border-2 border-primary"
               >
                 <AlertDescription className="font-medium text-primary text-center">
                   Batas pembayaran :{" "}
@@ -189,7 +189,7 @@ export default function PaymentPage() {
             <CardContent>
               <Alert
                 variant="destructive"
-                className="border-2 border-destructive bg-destructive-foreground"
+                className="border-2 border-destructive"
               >
                 <AlertDescription className="font-medium">
                   Pembayaran kadaluarsa
@@ -255,10 +255,9 @@ export default function PaymentPage() {
                       <TableCell>
                         <Badge
                           className={cn(
-                            "bg-sky-600 flex items-center justify-center px-2 py-1.5 font-normal",
-                            valid && "bg-green-500 px-2 py-1.5",
-                            inValid && "bg-destructive px-2 py-1.5",
-                            "rounded-full text-white text-sm w-24 h-8"
+                            "bg-sky-600 flex items-center justify-center px-2 py-2 font-normal",
+                            valid &&  "bg-red-500 px-2 py-2",
+                            "rounded-full text-white text-sm w-24 text-center"
                           )}
                         >
                           {status}

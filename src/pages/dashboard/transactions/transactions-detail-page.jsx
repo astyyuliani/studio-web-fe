@@ -168,15 +168,11 @@ export default function TransactionsDetailPage() {
       <div className="flex flex-col gap-2 lg:w-3/4">
         <div className="grid grid-cols-2">
           <p>Metode Pelunasan</p>
-          <Badge
-            className={cn(
-              fullPayment && "bg-sky-500 px-2 py-1 text-white text-sm w-20 text-center",
-              dpPayment && "bg-teal-500",
-              "text-white text-sm w-20 text-center",
-            )}
+          <p
+           
           >
             {trxType}
-          </Badge>
+          </p>
         </div>
         <div className="mt-4 grid grid-cols-2">
           <p>ID Reservasi</p>
@@ -275,10 +271,10 @@ export default function TransactionsDetailPage() {
             {transaction.data.transaction_detail.map((detail) => {
               const status =
                 detail.isValid === "true"
-                  ? "Valid"
+                  ? "Sesuai"
                   : detail.isValid === "false"
-                    ? "Tidak Valid"
-                    : "Menunggu";
+                    ? "Batal"
+                    : "Proses";
 
               const valid = detail.isValid === "true";
               const inValid = detail.isValid === "false";
@@ -288,10 +284,10 @@ export default function TransactionsDetailPage() {
                   <TableCell className="text-center lg:text-left">
                     <Badge
                       className={cn(
-                        "bg-sky-600",
-                        valid && "bg-green-500",
-                        inValid && "bg-destructive",
-                        "text-center lg:text-left px-2 py-1 rounded-full text-white text-sm w-fit",
+                        "bg-yellow-500 flex items-center justify-center px-2 py-2 font-normal",
+                        valid && "bg-green-500 px-2 py-2",
+                        inValid && "bg-destructive px-2 py-2",
+                        "rounded-full text-white text-sm w-24 text-center",
                       )}
                     >
                       {status}
@@ -328,8 +324,8 @@ export default function TransactionsDetailPage() {
                             }
                           >
                             <DialogTrigger asChild>
-                              <Button size="sm" className="bg-green-500 hover:bg-green-400 text-white">
-                                <Check size={20} />
+                              <Button size="icon" className="bg-green-500 w-9 h-9 flex items-center justify-center text-white rounded-sm hover:bg-green-400">
+                                <Check size={25} />
                               </Button>
                             </DialogTrigger>
                             <DialogContent>
@@ -363,8 +359,8 @@ export default function TransactionsDetailPage() {
                             }
                           >
                             <DialogTrigger asChild>
-                              <Button variant="destructive" size="sm">
-                                <Cross1Icon />
+                              <Button  size="smal" className="w-9 h-9 flex items-center justify-center text-white rounded-sm bg-red-500 hover:bg-red-400">
+                                <Cross1Icon width={20} height={20} />
                               </Button>
                             </DialogTrigger>
                             <DialogContent>

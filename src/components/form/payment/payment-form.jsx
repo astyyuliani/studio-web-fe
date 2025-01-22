@@ -132,7 +132,7 @@ export default function PaymentForm() {
             Kembali
           </Link>
           <Button isLoading={isSubmit} type="submit" className="w-full font-bold">
-            Kirim Bukti Pembayaran
+            Kirim Bukti
           </Button>
 
         </div>

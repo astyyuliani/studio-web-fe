@@ -252,10 +252,10 @@ export default function TodayScheduleTable() {
                 reservation.status === "success"
                   ? "Selesai"
                   : reservation.status === "cancelled"
-                    ? "Dibatalkan"
-                    : "Pending";
+                    ? "Batal"
+                    : "Proses";
 
-              const isCancelled = rsrvStatus === "Dibatalkan";
+              const isCancelled = rsrvStatus === "Batal";
               const isSuccess = rsrvStatus === "Selesai";
 
               return (
@@ -277,9 +277,10 @@ export default function TodayScheduleTable() {
                   <TableCell className="text-center">
                     <Badge
                       className={cn(
-                        "bg-yellow-500",
-                        isSuccess && "bg-green-500",
-                        isCancelled && "bg-red-500",
+                        "bg-yellow-500 flex items-center justify-center px-2 py-2 font-normal",
+                        isSuccess && "bg-green-500 px-2 py-2",
+                        isCancelled && "bg-red-500 px-2 py-2",
+                       "rounded-full text-white text-sm w-24 text-center"
                       )}
                     >
                       {rsrvStatus}

@@ -290,9 +290,10 @@ export default function ReservationsTable() {
                     <div className="flex justify-center items-center">
                       <div
                         className={cn(
-                          "bg-yellow-500 px-2 py-1 rounded-full text-white text-sm w-20 text-center",
-                          isSuccess && "bg-green-500 rounded-full text-white text-sm w-20 text-center",
-                          isCancelled && "bg-red-500 rounded-full text-white text-sm w-20 text-center",
+                          "bg-yellow-500 flex items-center justify-center px-2 py-2 font-normal",
+                          isSuccess && "bg-green-500 px-2 py-2",
+                          isCancelled && "bg-red-500 px-2 py-2",
+                          "rounded-full text-white text-sm w-24 text-center"
                         )}
                       >
                         {rsrvStatus}
