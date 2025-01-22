@@ -282,16 +282,9 @@ export default function TransactionsDetailPage() {
                 <TableRow key={detail.id}>
                   <TableCell>{rupiahFormat(detail.total)}</TableCell>
                   <TableCell className="text-center lg:text-left">
-                    <Badge
-                      className={cn(
-                        "bg-yellow-500 flex items-center justify-center px-2 py-2 font-normal",
-                        valid && "bg-green-500 px-2 py-2",
-                        inValid && "bg-destructive px-2 py-2",
-                        "rounded-full text-white text-sm w-24 text-center",
-                      )}
-                    >
+
                       {status}
-                    </Badge>
+                    
                   </TableCell>
                   <TableCell>
                     <Dialog className="max-w-2xl">
@@ -324,7 +317,7 @@ export default function TransactionsDetailPage() {
                             }
                           >
                             <DialogTrigger asChild>
-                              <Button size="icon" className="bg-green-500 w-9 h-9 flex items-center justify-center text-white rounded-sm hover:bg-green-400">
+                              <Button size="icon" className="bg-primary/80 w-9 h-9 flex items-center justify-center text-white rounded-sm hover:bg-primary/100">
                                 <Check size={25} />
                               </Button>
                             </DialogTrigger>
