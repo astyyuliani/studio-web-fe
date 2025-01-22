@@ -240,10 +240,10 @@ export default function PaymentPage() {
                 {transaction.data.transaction_detail.map((detail) => {
                   const status =
                     detail.isValid === "true"
-                      ? "Valid"
+                      ? "Diterima"
                       : detail.isValid === "false"
-                        ? "Tidak Valid"
-                        : "Proses";
+                        ? "Batal"
+                        : "Belum Proses";
 
                   const valid = detail.isValid === "true";
                   const inValid = detail.isValid === "false";
@@ -253,15 +253,9 @@ export default function PaymentPage() {
                       <TableCell>{dateTimeFormat(detail.createdAt)}</TableCell>
                       <TableCell>{rupiahFormat(detail.total)}</TableCell>
                       <TableCell>
-                        <Badge
-                          className={cn(
-                            "bg-sky-600 flex items-center justify-center px-2 py-2 font-normal",
-                            valid &&  "bg-red-500 px-2 py-2",
-                            "rounded-full text-white text-sm w-24 text-center"
-                          )}
-                        >
+                       
                           {status}
-                        </Badge>
+                      
                       </TableCell>
                     </TableRow>
                   );
