@@ -126,14 +126,14 @@ export default function HistoryTable() {
                         to={`/review/${reservation.id}/detail`}
                         className={cn(buttonVariants({ size: "sm" }), "mr-2")}
                       >
-                        Lihat Ulasan
+                        Ulasan
                       </Link>
                     ) : (
                       <Link
                         to={`/review/${reservation.id}`}
                         className={cn(buttonVariants({ size: "sm" }), "mr-2")}
                       >
-                        Ulasan
+                        Beri Ulasan
                       </Link>
                     ))}
                   <Link
