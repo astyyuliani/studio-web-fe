@@ -140,7 +140,7 @@ export default function HistoryTable() {
                     to={`/payment/${reservation.transactions.id}`}
                     className={cn(buttonVariants({ size: "sm" }))}
                   >
-                    Pembayaran
+                    Detail
                   </Link>
                 </div>
               </TableCell>
